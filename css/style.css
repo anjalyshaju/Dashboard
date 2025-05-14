@@ -1123,7 +1123,7 @@ li {
         justify-content: center;
         align-items: center;
         padding: 16px;
-        gap: 14px;
+        gap: 9px;
     }
 
     .step:not(:last-child)::before {
