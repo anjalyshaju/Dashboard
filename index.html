@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Hamburger (Mobile only) -->
+  <div class=" hamburger">
+    <div class="w-100">
+      <div class="mobile_size">
+        <div class="" onclick="toggleSidebar()">
+          <img src="images/menu.svg">
+        </div>
+        <div class=" sticky_header">
+          <div class="profile_section ">
+            <a href="">
+              <img src="images/like_icon.svg">
+            </a>
+            <div class="cart_notification">
+              <a href="">
+                <img src="images/cart_icon.svg">
+              </a>
+            </div>
+          </div>
+          <div class="user-container">
+            <div class="user-profile" onclick="toggleCard()">
+              <img src="images/profile.png" alt="User Avatar" class="avatar" />
+            </div>
+            <div class="profile-card" id="profileCard">
+              <img src="images/profile.png" alt="User Avatar" class="avatar" />
+              <span class="username f-wgt-400 f-16">John Paul</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="GT_Score d-flex">
+          <div class="GT_Score_value text-center">
+            <div class="f-wgt-600 f-17">1534</div>
+            <div class="f-wgt-400 f-12">GT Score</div>
+          </div>
+          <div class="position_set">
+            <div class="position_rate">
+              <img src="images/star01.svg">
+              <div class="rating">01</div>
+            </div>
+            <div class="position_rate">
+              <img src="images/star02.svg">
+              <div class="rating">03</div>
+            </div>
+            <div class="position_rate">
+              <img src="images/star03.svg">
+              <div class="rating">06</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hamburger (Mobile only) end -->
+
+  <!-- Sidebar menu-->
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="images/Logo.svg">
+    </div>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="images/user.svg">
+        <span class="label">Membership</span>
+      </div>
+      <div class="menu-item active">
+        <img src="images/grid.svg">
+        <span class="label">Dashboard</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/checking.svg">
+        <span class="label">Orders</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/pending.svg">
+        <span class="label">Help</span>
+      </div>
+    </div>
+  </div>
+  <!-- Sidebar menu end-->
+  <!-- Overlay for mobile -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <!-- <slider section end></slider> -->
+  <div class="content d-flex flex-column flex-column-fluid">
+    <!-- header section -->
+    <div class="container border-bottom full-width mobile_version">
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-center">
+          <h3 class="user_name">Hi John!</h3>
+        </div>
+        <div class="col-md-8">
+          <div class="search_box">
+            <div class="search">
+              <form>
+                <input type="text" placeholder="Search for products, brands and more" class="f-12">
+              </form>
+            </div>
+            <div>
+              <div class="GT_Score d-flex">
+                <div class="GT_Score_value text-center">
+                  <div class="f-wgt-600 f-17">1534</div>
+                  <div class="f-wgt-400 f-12">GT Score</div>
+                </div>
+                <div class="position_set">
+                  <div class="position_rate">
+                    <img src="images/star01.svg">
+                    <div class="rating">01</div>
+                  </div>
+                  <div class="position_rate">
+                    <img src="images/star02.svg">
+                    <div class="rating">03</div>
+                  </div>
+                  <div class="position_rate">
+                    <img src="images/star03.svg">
+                    <div class="rating">06</div>
+                  </div>
+                </div>
+                <div class="f-17 f-wgt-600 black-color back_value">56380B</div>
+              </div>
+            </div>
+            <div class="profile_section ">
+              <a href="">
+                <img src="images/like_icon.svg">
+              </a>
+              <div class="cart_notification">
+                <a href="">
+                  <img src="images/cart_icon.svg">
+                </a>
+              </div>
+            </div>
+            <div class="user-container">
+              <div class="user-profile" onclick="displayCard()">
+                <img src="images/profile.png" alt="User Avatar" class="avatar" />
+                <span class="username f-wgt-400 f-16">John Paul</span>
+                <div class="dropdown-icon"></div>
+              </div>
+
+              <div class="profile-card" id="profileCards">
+                <img src="images/profile.png" alt="User Avatar" class="avatar" />
+                <span class="username f-wgt-400 f-16">John Paul</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header section end -->
+    <div class="container mobile_responsive_search full-width ">
+      <div class="search">
+        <form>
+          <input type="text" placeholder="Search for products, brands and more" class="f-12">
+        </form>
+      </div>
+    </div>
+    <!-- inner section start-->
+    <div class="container main_card pt-0">
+      <div class="row">
+        <div class="col-lg-9 ">
+          <!-- How to be a member section -->
+          <div class="common_padding">
+            <div class="f-wgt-400 fs-20 member_class class_top">How to be a member</div>
+            <div class="main_box">
+              <div class="steps-container">
+                <div class="step">
+                  <div class="icon-box">
+                    <img src="images/ic_sharp-login.svg">
+                  </div>
+                  <p>Login or Signup</p>
+                </div>
+                <div class="step">
+                  <div class="icon-box">
+                    <img src="images/ri_profile-line.svg">
+                  </div>
+                  <p>Membership in Profile</p>
+                </div>
+                <div class="step">
+                  <div class="icon-box">
+                    <img src="images/bx_select-multiple.svg">
+                  </div>
+                  <p>Select a Subscription</p>
+                </div>
+                <div class="step">
+                  <div class="icon-box">
+                    <img src="images/ic_outline-payments.svg">
+                  </div>
+                  <p>Pay the Bill</p>
+                </div>
+                <div class="step">
+                  <div class="icon-box">
+                    <img src="images/charm_circle-tick.svg">
+                  </div>
+                  <p>Get the Membership</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- How to be a member section end-->
+
+            <!-- shoes section start -->
+
+            <div class="tab_section">
+              <div class="f-wgt-400 fs-20 member_class">shoes</div>
+              <div>
+                <div class="d-flex">
+                  <ul class="nav nav-pills mb-3  border-2" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link f-14 f-wgt-400  active position-relative" id="pills-home-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Sneakers</button>
+                      <div class="tab_value f-14 f-wgt-400">06</div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link f-14 f-wgt-400 position-relative" id="pills-profile-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Sports Shoes</button>
+                      <div class="tab_value f-14 f-wgt-400">02</div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link f-14 f-wgt-400  position-relative" id="pills-contact-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">Sports Shoes</button>
+                      <div class="tab_value f-14 f-wgt-400">03</div>
+                    </li>
+                  </ul>
+                  <div class="ml-auto">
+                    <a href="#" class="view_btn">
+                      <div class="f-14 f-wgt-400">View all</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content   text-danger" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                    aria-labelledby="pills-home-tab">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/unsplash.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma BLack Bun PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/addidas_sneakers.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Adidas neo Men's Vs Set Sneakers</h3>
+                            <h4>Men Crater Adidas Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is Adidas.</span>As one of the world’s leading sports brands,
+                              Adidas believes in standing on the same playing field as the fastest athletes on the
+                              planet.
+                              With a mission of Forever Faster, PUMA shares excitement in Teamsports, innovates Golf,
+                              brings
+                              style into Running . Adidas has associations with some of the most elite athletes, such as
+                              sprint legend Usain Bolt and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/puma_sneakers.png">
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma Men's PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>5736</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/unsplash.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma BLack Bun PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/addidas_sneakers.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Adidas neo Men's Vs Set Sneakers</h3>
+                            <h4>Men Crater Adidas Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is Adidas.</span>As one of the world’s leading sports brands,
+                              Adidas believes in standing on the same playing field as the fastest athletes on the
+                              planet.
+                              With a mission of Forever Faster, PUMA shares excitement in Teamsports, innovates Golf,
+                              brings
+                              style into Running . Adidas has associations with some of the most elite athletes, such as
+                              sprint legend Usain Bolt and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/puma_sneakers.png">
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma Men's PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>5736</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/unsplash.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma BLack Bun PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/addidas_sneakers.png">
+                            <div class="squere_type f-14 f-wgt-400">Best seller</div>
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Adidas neo Men's Vs Set Sneakers</h3>
+                            <h4>Men Crater Adidas Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>4537</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is Adidas.</span>As one of the world’s leading sports brands,
+                              Adidas believes in standing on the same playing field as the fastest athletes on the
+                              planet.
+                              With a mission of Forever Faster, PUMA shares excitement in Teamsports, innovates Golf,
+                              brings
+                              style into Running . Adidas has associations with some of the most elite athletes, such as
+                              sprint legend Usain Bolt and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <div class="tab_one_img">
+                            <img src="images/puma_sneakers.png">
+                          </div>
+                          <div class="heading_card">
+                            <h3 class="heading_common">Puma Men's PumaSmashVulc Sneakers</h3>
+                            <h4>Men Crater Puma Sneakers</h4>
+                            <div class="amount"><span>Rs.</span>5736</div>
+                          </div>
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="heading_common">Description</h3>
+                            <p><span class="d-block">This is PUMA.</span>PUMA has associations with some of the most
+                              elite
+                              athletes, such as sprint legend Usain Bolt, star striker Antoine Griezmann, Indian Cricket
+                              Captain Virat Kohli, fashion icons like Cara Delevingne, Selena Gomez, and many more.
+                            </p>
+                            <div>
+                              <div class="rating">
+                                <div class="ratings f-14 f-wgt-400 ">115 ratings</div>
+                                <label for="r1"></label>
+                                <label for="r2" class="checked"></label>
+                                <label for="r3" class="checked"></label>
+                                <label for="r4" class="checked"></label>
+                                <label for="r5" class="checked"> </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- shoes section start -->
+        <!-- /* right side section start */ -->
+        <div class="col-lg-3 border-width">
+          <div class="left_side_main common_padding">
+            <h3 class="f-wgt-700">Get the Membership &
+              Never Pay Full Price Again</h3>
+            <div class="card">
+              <div class="benifits">
+                <img src="images/benifit_vector.svg">
+              </div>
+              <div class="card-body ">
+                <h4 class="heading_benifits f-wgt-600 ">Benefits</h4>
+                <ul>
+                  <li>
+                    <h4 class="f-14 f-wgt-400">Member Only Discounts</h3>
+                      <p>Save on every purchase! Enjoy special
+                        prices on a wide range of product categories</p>
+                  </li>
+                  <li>
+                    <h4 class="f-14 f-wgt-400">Priority Support</h3>
+                      <p>Get all your queries resolved on a priority basis, only for TriBe members</p>
+                  </li>
+                  <li>
+                    <h4 class="f-14 f-wgt-400">Early Access to Collections</h3>
+                      <p>Grab the latest products and exclusive collections before everyone else</p>
+                  </li>
+                </ul>
+                <a href="#" class="f-14 f-wgt-400">Learn More</a>
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /* right side section start */ -->
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
